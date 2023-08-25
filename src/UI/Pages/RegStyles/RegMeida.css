@@ -1,0 +1,25 @@
+@media screen and (max-width: 875px) {
+  .line {
+    height: calc(100vh - 8px);
+  }
+}
+@media screen and (max-width: 766px) {
+  .left--side {
+    /* display: hidden; */
+    display: none;
+  }
+  .line {
+    /* display: none; */
+    width: 100vw;
+    height: 73px;
+    background-color: #161618;
+    background-image: none;
+    border-bottom: #6e7af3 3px solid;
+  }
+  .reg--page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
