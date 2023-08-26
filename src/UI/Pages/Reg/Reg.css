@@ -1,3 +1,20 @@
+.reg--page {
+  display: grid;
+  grid-template-columns: 5fr 3px 9.88fr;
+  overflow-y: hidden;
+}
+.line {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #6e5af3,
+    #6160f6,
+    #5366f9,
+    #426bfb,
+    #2c70fd
+  );
+}
+
 @media screen and (max-width: 875px) {
   .line {
     height: calc(100vh - 8px);

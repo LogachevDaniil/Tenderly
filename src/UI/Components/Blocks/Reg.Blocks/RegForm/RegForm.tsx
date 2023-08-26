@@ -1,20 +1,12 @@
-import React, { useState } from "react";
-import "./RegForm.css";
-import classNames from "classnames";
-export const RegForm = () => {
-  const [show, setShow] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+import React, { useState } from 'react';
+import './RegForm.css';
+import classNames from 'classnames';
 
-  const btnImageClass = classNames(
-    "image",
-    { "pass--show-image": show },
-    { "pass--hide-image": !show }
-  );
-  const btnClass = classNames("pass--hide--button", { hide: !show });
-  const btnSubmitClass = classNames("form__submit--button", {
-    'canSubmit--button': email && password,
-  });
+export function RegForm() {
+  const [show, setShow] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const showSwitchHandler = () => {
     setShow(!show);
   };
@@ -31,7 +23,7 @@ export const RegForm = () => {
           Email / Username
         </label>
         <input
-          type="text"
+          type="email"
           name="email"
           placeholder="troybarnes"
           className="input"
@@ -44,23 +36,33 @@ export const RegForm = () => {
           Password
         </label>
         <input
-          type="text"
+          type={show ? 'text' : 'password'}
           name="password"
           placeholder="#sixseasonsandamovie"
           className="input"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <div className={btnClass} onClick={showSwitchHandler}>
-          <div className={btnImageClass} />
+        <div className={classNames('pass--hide--button', { hide: !show })} onClick={showSwitchHandler}>
+          <div className={classNames(
+            'image',
+            { 'pass--show-image': show },
+            { 'pass--hide-image': !show },
+          )}
+          />
         </div>
       </div>
       <a href="#" className="link little--link">
         Forgot your password?
       </a>
-      <button className={btnSubmitClass} onClick={emailSwitchHandler}>
+      <button
+        className={classNames('form__submit--button', {
+          'canSubmit--button': email && password,
+        })}
+        onClick={emailSwitchHandler}
+      >
         Sign in
       </button>
     </form>
   );
-};
+}

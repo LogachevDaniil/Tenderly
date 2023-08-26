@@ -1,0 +1,38 @@
+h2,
+h3,
+p {
+  margin: 0%;
+}
+
+.App {
+  letter-spacing: 0.09px;
+  /* background-color: aqua; */
+}
+
+body {
+  font-family: inter, sans-serif;
+  font-weight: 400;
+  background-color: #161618;
+  line-height: 1.25rem;
+  letter-spacing: -0.09px;
+}
+
+body::-webkit-scrollbar {
+  background-color: #161618;
+  height: 8px;
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #161618;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #505052;
+}
+
+.link {
+  color: #9e8cfc;
+  text-decoration: none;
+}

@@ -1,16 +1,20 @@
-import React from "react";
-import "./RightSide.css";
-import { RegForm } from "../RegForm/RegForm";
-import { AnotherSignIn } from "../AnotherSignIn/AnotherSignIn";
-import { ChatBlock } from "../../ChatBlock/ChatBlock";
-export const RightSide = () => {
+import React from 'react';
+import './RightSide.css';
+import { RegForm } from '../RegForm/RegForm';
+import { AnotherSignIn } from '../AnotherSignIn/AnotherSignIn';
+import { ChatBlock } from '../../ChatBlock/ChatBlock';
+
+export function RightSide() {
   return (
     <div className="right--side">
       <div className="signIn--form">
         <div className="box">
-          <strong>Attention:</strong> Tenderly Node Release: Ready to try
+          <strong>Attention:</strong>
+          {' '}
+          Tenderly Node Release: Ready to try
           DevNets or Node Extensions? For more information on our new node
-          solutions,{" "}
+          solutions,
+          {' '}
           <a href="#" className="link">
             check out our changelog
           </a>
@@ -18,7 +22,8 @@ export const RightSide = () => {
         </div>
         <h3 className="signIn__text">Sign in to Tenderly</h3>
         <p className="create--accaunt--add">
-          Don't have an account?{" "}
+          Don't have an account?
+          {' '}
           <a href="#" className="link">
             Create an account
           </a>
@@ -31,4 +36,4 @@ export const RightSide = () => {
       <ChatBlock />
     </div>
   );
-};
+}

@@ -1,15 +1,14 @@
-import React, { useContext, useState } from "react";
-import "./CookiesBlock.css";
-import classNames from "classnames";
-export const CookiesBlock = () => {
+import React, { useState } from 'react';
+import './CookiesBlock.css';
+import classNames from 'classnames';
+
+function CookiesBlock() {
   const [closeCookies, setCloseCookies] = useState(false);
   const closeCookiesSwitchHandler = () => {
     setCloseCookies(!closeCookies);
-    console.log(closeCookiesClass);
   };
-  const closeCookiesClass = classNames("CookiesBlock", { close: closeCookies });
   return (
-    <div className={closeCookiesClass}>
+    <div className={classNames('CookiesBlock', { close: closeCookies })}>
       <div className="description-side">
         <p className="Cookies__title">We use cookies! 🍪</p>
         <div className="description-scroll-block">
@@ -21,17 +20,20 @@ export const CookiesBlock = () => {
         </div>
       </div>
       <div className="buttons-side">
-        <button className="Cookies__button margin-bottom transparent">
+        <button type="button" className="Cookies__button margin-bottom transparent">
           Manage individual preferences
         </button>
         <button
+          type="button"
           className="Cookies__button margin-bottom purpul"
           onClick={closeCookiesSwitchHandler}
         >
           Accept all
         </button>
-        <button className="Cookies__button purpul">Reject all</button>
+        <button type="button" className="Cookies__button purpul">Reject all</button>
       </div>
     </div>
   );
-};
+}
+
+export default CookiesBlock;
