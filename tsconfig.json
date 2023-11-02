@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.alias.json",
+  "extends":["./tsconfig.extend.json"],
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -21,8 +21,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ],
-  
+  "include": ["src"]
 }

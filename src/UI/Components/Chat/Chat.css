@@ -1,0 +1,17 @@
+.message {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #664fc1;
+    box-shadow: 0 0 20px 15px #151517;
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    transition: 0.15s;
+  }
+.message:hover{
+  transform: scale(1.1);
+}

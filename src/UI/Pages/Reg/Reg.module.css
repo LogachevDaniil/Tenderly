@@ -1,0 +1,24 @@
+.regPage {
+    display: grid;
+    grid-template-columns: 5fr 9.88fr;
+    overflow-x: hidden;
+  }
+  .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130.5px;
+    height: 36px;
+    padding: 16px 32px;
+  }
+  @media screen and (max-width: 766px) {
+    .regPage {
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }
+  

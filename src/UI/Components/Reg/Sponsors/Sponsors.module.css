@@ -1,0 +1,52 @@
+/* left side */
+.sponsors {
+  background-image: url("/public/images/alerting_feature_image.svg");
+  background-position: center 39.5%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  border-right: 3px inset;
+  border-image: linear-gradient(180deg, #6e5af3, #2c70fd) 1;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+.description__text {
+  text-align: center;
+  font-size: 1.125rem;
+  margin: 0;
+  color: #ededef;
+}
+
+.trustersLogos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.companyLogo {
+  padding: 12px;
+  height: 24px;
+}
+
+@media screen and (max-width: 766px) {
+  .sponsors {
+    background-image: none;
+    width: 100vw;
+    height: 4.625rem;
+    border-right: 0;
+    border-bottom: inset;
+    border-image: linear-gradient(270deg, #6e5af3, #2c70fd) 1;
+  }
+ 
+  .description {
+    display: none;
+    height: 0;
+  }
+}
